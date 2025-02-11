@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tabla Notion - Menú emergente por columna</title>
+  <!-- Enlazamos la hoja de estilos externa -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Tabla estilo Notion - Menú emergente por columna</h1>
+
+  <div class="container">
+    <div class="table-responsive">
+      <table id="notionTable">
+        <thead>
+          <tr>
+            <th>Nombre</th>              <!-- Col 0: Editable (sin menú) -->
+            <th>Puntuación /5</th>       <!-- Col 1: Menú emergente -->
+            <th>Tipo</th>                <!-- Col 2: Menú emergentee -->
+            <th>Autor/Director</th>      <!-- Col 3: Menú emergente -->
+            <th>Fecha</th>              <!-- Col 4: Menú emergente -->
+            <th>Publisher</th>          <!-- Col 5: Menú emergente -->
+            <th>Estado</th>             <!-- Col 6: Menú emergente -->
+            <th>Resumen</th>            <!-- Col 7: Editable (sin menú) -->
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          <tr>
+            <td contenteditable="true">Red Dead Redemption 2</td>
+            <td>5</td>
+            <td>Juego</td>
+            <td>Rockstar</td>
+            <td>2018</td>
+            <td>Rockstar Games</td>
+            <td>Terminado</td>
+            <td contenteditable="true">Un western de mundo abierto</td>
+          </tr>
+          <tr>
+            <td contenteditable="true">Hollow Knight</td>
+            <td>4</td>
+            <td>Juego</td>
+            <td>Team Cherry</td>
+            <td>2023</td>
+            <td>Team Cherry</td>
+            <td>Terminado</td>
+            <td contenteditable="true">Metroidvania desafiante</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr class="add-row">
+            <td colspan="8" id="addRowBtn">+ Agregar una fila</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+
+  <!-- Menú emergente (pop-up) -->
+  <div id="popupMenu" class="popup-menu">
+    <h4 id="popupTitle">Seleccionar categoría</h4>
+    <div class="category-list" id="categoryList"></div>
+    
+    <div class="new-category">
+      <input type="text" id="newCategoryInput" placeholder="Nueva categoría..." />
+      <button id="addCategoryBtn">Añadir</button>
+    </div>
+  </div>
+
+  <!-- Enlazamos el archivo JavaScript externo -->
+  <script src="script.js"></script>
+</body>
+</html>
